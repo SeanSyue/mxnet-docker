@@ -10,6 +10,5 @@ RUN apt-get update && \
     apt-get install -y wget python${PY_VER} libgomp1 && \
     wget https://bootstrap.pypa.io/get-pip.py && \
     python${PY_VER} get-pip.py && \ 
+    rm get-pip.py && \
     python${PY_VER} -m pip install mxnet-cu100
-
-CMD python${PY_VER}
